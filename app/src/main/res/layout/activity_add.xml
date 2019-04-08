@@ -52,11 +52,13 @@
         android:orientation="horizontal">
 
         <RadioButton
+            android:id="@+id/radio_male"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Male"/>
 
         <RadioButton
+            android:id="@+id/radio_female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Female"/>
@@ -76,7 +78,8 @@
         android:id="@+id/tanggal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Tanggal"/>
+        android:hint="Tanggal"
+        android:focusable="false"/>
 
     <EditText
         android:id="@+id/phone"
@@ -84,8 +87,7 @@
         android:layout_height="wrap_content"
         android:hint="Phone"/>
 
-
-        <Button
+    <Button
             android:id="@+id/btnSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

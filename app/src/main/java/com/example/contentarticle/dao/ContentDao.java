@@ -20,4 +20,5 @@ public interface ContentDao {
 
     @Delete
     void delete(Content content);
+
 }

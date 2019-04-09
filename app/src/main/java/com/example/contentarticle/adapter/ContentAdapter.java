@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.example.contentarticle.R;
 import com.example.contentarticle.activity.DetailContentActivity;
 import com.example.contentarticle.activity.HomeActivity;
+import com.example.contentarticle.activity.UpdateActivity;
 import com.example.contentarticle.helper.DatabaseClient;
 import com.example.contentarticle.model.room.Content;
 
@@ -85,6 +86,17 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ContentV
                     });
                     AlertDialog dialog = builder.create();
                     dialog.show();
+                }
+            });
+
+            mBtnEdit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Content content = contentList.get(getAdapterPosition());
+                    Intent intent = new Intent(mContext, UpdateActivity.class);
+                    intent.putExtra("editContent", content);
+                    mContext.startActivity(intent);
+                    ((Activity) mContext).finish();
                 }
             });
         }

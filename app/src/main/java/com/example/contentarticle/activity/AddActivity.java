@@ -159,7 +159,5 @@ public class AddActivity extends AppCompatActivity {
 
             SaveContent saveContent = new SaveContent();
             saveContent.execute();
-
-
     }
 }
